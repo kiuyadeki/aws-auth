@@ -6,19 +6,25 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "secretlint": "secretlint --maskSecrets --secretlintignore .gitignore '**/*'",
+    "prettier-check": "prettier --cache --check .",
+    "prettier-fix": "prettier --cache --write ."
   },
   "dependencies": {
+    "next": "14.2.3",
     "react": "^18",
-    "react-dom": "^18",
-    "next": "14.2.3"
+    "react-dom": "^18"
   },
   "devDependencies": {
-    "typescript": "^5",
+    "@secretlint/secretlint-rule-preset-recommend": "^8.2.4",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "eslint": "^8",
-    "eslint-config-next": "14.2.3"
+    "eslint-config-next": "14.2.3",
+    "prettier": "^3.2.5",
+    "secretlint": "^8.2.4",
+    "typescript": "^5"
   }
 }
